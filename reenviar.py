@@ -100,6 +100,10 @@ app = Flask(__name__)
 def health():
     return "OK", 200
 
+@app.get("/ping")
+def ping():
+    return "PONG", 200
+
 
 if __name__ == "__main__":
     # Arranca el bot en segundo plano
