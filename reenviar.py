@@ -1,10 +1,9 @@
 import os
 from telethon import TelegramClient, events
 
-api_id = int(os.environ["API_ID"])
-api_hash = os.environ["API_HASH"]
-
-client = TelegramClient("mi_sesion_reenviar", api_id, api_hash)
+api_id = int(os.getenv("API_ID"))
+api_hash = os.getenv("API_HASH")
+client = TelegramClient("mi_sesion_debug", api_id, api_hash)
 
 # Define tus pares origen -> destino
 PAIRS = [
