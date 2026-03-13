@@ -4,3 +4,4 @@
 *.session-journal
 __pycache__/
 .env
+expport_session.py
