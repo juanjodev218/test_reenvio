@@ -13,7 +13,7 @@ api_hash = os.environ["API_HASH"]
 client = TelegramClient(StringSession(SESSION_STRING), api_id, api_hash)
 
 PAIRS = [
-    (-1003585196721, -1003820294533),
+    (-1003596741939, -1003820294533),
     (-1003020297428, -1003728976509),
 ]
 
