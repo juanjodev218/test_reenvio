@@ -15,21 +15,17 @@ client = TelegramClient(StringSession(SESSION_STRING), api_id, api_hash)
 # RUTAS: chat origen -> chat destino + tema destino
 # -------------------------------------------------
 ROUTES = {
+    -1003805449629: {
+        "dest_chat": -1003668463973,
+        "dest_thread": 111,   # reemplaza por el thread real de "SEÑALES BÁSICAS"
+    },
     -1003585196721: {
-        "dest_chat": -1003820294533,
-        "dest_thread": None,  # reemplaza por el thread real de "SEÑALES BÁSICAS"
+        "dest_chat": -1003668463973,
+        "dest_thread": 222,   # reemplaza por el thread real de "SEÑALES PRO"
     },
     -1003020297428: {
         "dest_chat": -1003728976509,
-        "dest_thread": None,  # reemplaza por el thread real de "SEÑALES PRO"
-    },
-    -1003805449629: {
-        "dest_chat": -1003668463973,
-        "dest_thread": None,  # tema vip 1
-    },
-    -1003585196721: {
-        "dest_chat": -1003668463973,
-        "dest_thread": None,  # tema vip 2
+        "dest_thread": None,  # si el destino NO usa temas
     },
 }
 
@@ -144,11 +140,9 @@ def run_bot():
 # ---------------- WEB ----------------
 app = Flask(__name__)
 
-
 @app.get("/")
 def health():
     return "OK", 200
-
 
 @app.get("/ping")
 def ping():
