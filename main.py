@@ -13,8 +13,8 @@ api_hash = os.environ["API_HASH"]
 client = TelegramClient(StringSession(SESSION_STRING), api_id, api_hash)
 
 PAIRS = [
-    (-1003596741939, -1003786011342),
-    (-1003020297428, -1003832259307),
+    (-1003585196721, -1003820294533),
+    (-1003020297428, -1003728976509),
 ]
 
 ORIGENES = [o for o, _ in PAIRS]
@@ -159,9 +159,11 @@ def run_bot():
 # ---------------- WEB ----------------
 app = Flask(__name__)
 
+
 @app.get("/")
 def health():
     return "OK", 200
+
 
 @app.get("/ping")
 def ping():
